@@ -1,5 +1,6 @@
 function clickButton(){
     let str = document.querySelector("textarea").value.replace(/ /g,"");
+    str = str.replace(/\n/g, "");
     let addrList = str.split(",");
 
     const leaves = addrList.map(x => keccak256(x));
